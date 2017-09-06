@@ -21,6 +21,8 @@
         <td><%= restaurant.phone_number %></td>
         <td><%= restaurant.category %></td>
         <td><%= link_to 'Show', restaurant, class: "btn btn-primary btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-warning btn-xs" %></td>
+        <td><%= link_to 'Destroy', restaurant, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

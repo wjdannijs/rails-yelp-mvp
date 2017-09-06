@@ -20,5 +20,20 @@
   <%= @restaurant.category %>
 </p>
 
+
+<hr>
+
+<% @reviews.each do |review| %>
+<div class="review-card">
+<%= review.content %>
+<br>
+</div>
+<% end %>
+
+<br>
+<%= link_to "Add a new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+<br>
+<hr>
+
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>
